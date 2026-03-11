@@ -37,3 +37,10 @@ sudo apt update
 sudo apt install -y python3-pip python3-smbus i2c-tools
 sudo usermod -a -G i2c $USER
 # Reboot or log out and back in
+
+
+### 2. Verify connections
+```bash
+sudo i2cdetect -y -r 1
+
+# Check the address, usually its 0x68. If not, change that address in the mpu6050.py
